@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Car Evaluator</title>
+    <link rel="stylesheet" href="design.css">
+{% endblock %}
+
+{% block body %}
+  <form class="form-horizontal" method="POST" action="/get-features">
+      <fieldset>
+      
+      <!-- Form Name -->
+      <legend>Car Evaluation Features</legend>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="buying">Buying Price</label>
+        <div class="col-md-4">
+          <select id="buying" name="buying" class="form-control" required>
+            <option value="1">Very High</option>
+            <option value="2">High</option>
+            <option value="3">Medium</option>
+            <option value="4">Low</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="maint">Maintenance</label>
+        <div class="col-md-4">
+          <select id="maint" name="maint" class="form-control" required>
+            <option value="1">Very High</option>
+            <option value="2">High</option>
+            <option value="3">Medium</option>
+            <option value="4">Low</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="doors">Doors</label>
+        <div class="col-md-4">
+          <select id="doors" name="doors" class="form-control" required>
+            <option value="1">2</option>
+            <option value="2">3</option>
+            <option value="3">4</option>
+            <option value="4">5 or more</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="persons">Persons</label>
+        <div class="col-md-4">
+          <select id="persons" name="persons" class="form-control" required>
+            <option value="1">2</option>
+            <option value="2">4</option>
+            <option value="3">more</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="lug_boot">Trunk space</label>
+        <div class="col-md-4">
+          <select id="lug_boot" name="lug_boot" class="form-control" required>
+            <option value="1">Small</option>
+            <option value="2">Medium</option>
+            <option value="3">Big</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="safety">Safety</label>
+        <div class="col-md-4">
+          <select id="safety" name="safety" class="form-control" required>
+            <option value="1">Low</option>
+            <option value="2">Medium</option>
+            <option value="3">High</option>
+          </select>
+        </div>
+      </div>
+      
+  
+      <!-- Button -->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="submit button"></label>
+          <div class="col-md-4">
+          <button id="submit button" name="submit button" class="btn btn-primary">Submit</button>
+          </div>
+      </div>
+    
+      </fieldset>
+      </form>
+  </body>

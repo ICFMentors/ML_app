@@ -4,7 +4,7 @@ app.secret_key = 'ML_app'  # Set a secret key for session security
 
 @app.route('/')
 def index():
-    return render_template('webpage.html')
+    return render_template('index.html')
 
 @app.route('/get-features', methods=['POST'])
 def getFeatures():
