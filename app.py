@@ -2,6 +2,14 @@ from flask import Flask, render_template, request, redirect, session, flash, abo
 app = Flask(__name__)
 app.secret_key = 'ML_app'  # Set a secret key for session security
 
+# Declare global variables
+price = None
+maint = None
+doors = None
+people = None
+trunk = None
+safety = None
+
 @app.route('/')
 def index():
     return render_template('index.html')
