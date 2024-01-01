@@ -8,10 +8,10 @@ def index():
 
 @app.route('/get-features', methods=['POST'])
 def getFeatures():
-    price = request.form['Buying']
+    price = request.form['buying']
     maint = request.form['maint']
     doors = request.form['doors']
-    people = request.form['Persons']
+    people = request.form['persons']
     trunk = request.form['lug_boot']
     safety = request.form['safety']
     print(price, maint, doors, people, trunk, safety)
