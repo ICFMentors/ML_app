@@ -1,3 +1,8 @@
+<head>
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
 <form class="form-horizontal" method="POST" action="/get-features">
     <fieldset>
     
@@ -8,7 +13,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="Buying">Buying price</label>
       <div class="col-md-4">
-        <select id="Buying" name="Buying" class="form-control">
+        <select id="Buying" name="Buying" class="form-control" required>
           <option value="1">Very High</option>
           <option value="2">High</option>
           <option value="3">Medium</option>
@@ -21,7 +26,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="maint">Maintenance </label>
       <div class="col-md-4">
-        <select id="maint" name="maint" class="form-control">
+        <select id="maint" name="maint" class="form-control" required>
           <option value="1">Very High</option>
           <option value="2">High</option>
           <option value="3">Medium</option>
@@ -34,7 +39,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="doors">Doors</label>
       <div class="col-md-4">
-        <select id="doors" name="doors" class="form-control">
+        <select id="doors" name="doors" class="form-control" required>
           <option value="1">2</option>
           <option value="2">3</option>
           <option value="3">4</option>
@@ -47,7 +52,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="Persons">Persons</label>
       <div class="col-md-4">
-        <select id="Persons" name="Persons" class="form-control">
+        <select id="Persons" name="Persons" class="form-control" required>
           <option value="1">2</option>
           <option value="2">4</option>
           <option value="3">more</option>
@@ -59,7 +64,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="lug_boot">Trunk space</label>
       <div class="col-md-4">
-        <select id="lug_boot" name="lug_boot" class="form-control">
+        <select id="lug_boot" name="lug_boot" class="form-control" required>
           <option value="1">Small</option>
           <option value="2">Medium</option>
           <option value="3">Big</option>
@@ -71,7 +76,7 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="safety">Safety</label>
       <div class="col-md-4">
-        <select id="safety" name="safety" class="form-control">
+        <select id="safety" name="safety" class="form-control" required>
           <option value="1">Low</option>
           <option value="2">Medium</option>
           <option value="3">High</option>
@@ -90,3 +95,4 @@
   
     </fieldset>
     </form>
+</body>
