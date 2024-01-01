@@ -15,7 +15,7 @@ def getFeatures():
     trunk = request.form['lug_boot']
     safety = request.form['safety']
     print(price, maint, doors, people, trunk, safety)
-    return render_template('webpage.html')
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
