@@ -6,3 +6,5 @@ app.secret_key = 'ML_app'  # Set a secret key for session security
 def index():
     return render_template('webpage.html')
 
+if __name__ == '__main__':
+    app.run(debug=True, port=8080)
