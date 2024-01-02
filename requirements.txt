@@ -11,3 +11,8 @@ flask_login
 pymysql
 python-dotenv
 pyrebase4
+onnx
+pydot
+onnxruntime
+skl2onnx
+pandas
