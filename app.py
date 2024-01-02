@@ -24,7 +24,7 @@ safety = ""
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', rating=0)
 
 @app.route('/get-features', methods=['POST'])
 def getFeatures():
@@ -38,7 +38,7 @@ def getFeatures():
     print(car_eval_features)
     car_eval_class = get_rating(car_eval_features)
     print(car_eval_class)
-    return redirect('/')
+    return render_template('index.html', rating=car_eval_class)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
