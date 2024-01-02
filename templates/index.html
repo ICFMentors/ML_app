@@ -130,6 +130,12 @@
      currentTemperature = CarGrade;
      }
 
+     if (CarGrade === 1) {
+   mercury.style.backgroundColor = 'green';
+ } else {
+   mercury.style.backgroundColor = 'red';
+ }
+
      increaseTempButton.addEventListener('click', function() {
      if (currentTemperature < 3) {
        currentTemperature += 1;
