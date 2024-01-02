@@ -2,10 +2,12 @@
 
 {% block head %}
     <title>Car Evaluator</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="../static/design.css">
 {% endblock %}
 
 {% block body %}
+<div class="row">
+  <div class="col-6 form">
   <form class="form-horizontal" method="POST" action="/get-features">
       <fieldset>
       
@@ -98,4 +100,49 @@
     
       </fieldset>
       </form>
+      </div>
+
+
+      <div class="col-6">
+      <button id="increaseTemp">Increase Grade</button>
+
+  <div id="thermometer">
+    <div id="mercury"></div>
+  </div>
+  <div id="CarGrade">0</div>
+  </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+     const thermometer = document.getElementById('thermometer');
+     const mercury = document.getElementById('mercury');
+     const gradeDisplay = document.getElementById('CarGrade');
+     const increaseTempButton = document.getElementById('increaseTemp');
+
+     let currentTemperature = 0;
+     const temperatures = ['Unacceptable', 'Acceptable', 'Good', 'Very Good'];
+
+     function setGrade(CarGrade) {
+     const height = (CarGrade / 3) * thermometer.clientHeight;
+     mercury.style.height = height + 'px';
+     gradeDisplay.innerText = temperatures[CarGrade];
+     currentTemperature = CarGrade;
+     }
+
+     increaseTempButton.addEventListener('click', function() {
+     if (currentTemperature < 3) {
+       currentTemperature += 1;
+       setGrade(currentTemperature);
+     } else {
+       alert("Maximum temperature reached!");
+     }
+     });
+
+     // Example: Set initial temperature
+     setGrade(currentTemperature);
+    });
+
+
+  </script>
 {% endblock %}

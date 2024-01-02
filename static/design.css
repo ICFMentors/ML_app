@@ -1,3 +1,43 @@
 .form-group{
-    align-items: center;
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
 }
+
+.form {
+    margin-left: 50px;
+}
+
+
+#thermometer {
+    position: relative;
+    width: 20px;
+    height: 200px;
+    background-color: #ccc;
+    margin: 5px;
+ }
+ 
+ #mercury {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    transition: height 0.5s ease-in-out;
+ }
+ 
+ #CarGrade {
+    position: absolute;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-left: 10px;
+ }
+ 
+ #increaseTemp {
+    position: absolute;
+    margin: 15px;
+ }
