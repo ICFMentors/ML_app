@@ -2,100 +2,275 @@
 
 {% block head %}
     <title>Car Evaluator</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="../static/design.css">
 {% endblock %}
 
 {% block body %}
-  <form class="form-horizontal" method="POST" action="/get-features">
-      <fieldset>
-      
-      <!-- Form Name -->
-      <legend>Car Evaluation Features</legend>
-      
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="buying">Buying Price</label>
-        <div class="col-md-4">
-          <select id="buying" name="buying" class="form-control" required>
-            <option value="1">Very High</option>
-            <option value="2">High</option>
-            <option value="3">Medium</option>
-            <option value="4">Low</option>
-          </select>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form class="form-horizontal" method="POST" action="/get-features">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <h2>Car Evaluation Features</h2>
+            <h5></h5>
+            
+            <!-- Select Basic -->
+            <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="buying">Buying Price</label>
+                <div class="col-md-4">
+                <select id="buying" name="buying" class="form-control" required>
+                    <option value="vhigh">Very High</option>
+                    <option value="high">High</option>
+                    <option value="med">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                </div>
+            </div> -->
+
+            <h5>Buying Price</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="buying" id="inlineRadio1.1" value="vhigh">
+                <label class="form-check-label" for="inlineRadio1.1">Very High</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="buying" id="inlineRadio1.2" value="high">
+                <label class="form-check-label" for="inlineRadio1.2">High</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="buying" id="inlineRadio1.3" value="med">
+                <label class="form-check-label" for="inlineRadio1.3">Medium</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="buying" id="inlineRadio1.4" value="low">
+                <label class="form-check-label" for="inlineRadio1.4">Low</label>
+            </div>
+            <p></p>
+            
+            <!-- Select Basic -->
+            <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="maint">Maintenance</label>
+                <div class="col-md-4">
+                <select id="maint" name="maint" class="form-control" required>
+                    <option value="vhigh">Very High</option>
+                    <option value="high">High</option>
+                    <option value="med">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                </div>
+            </div> -->
+
+            <h5>Maintenance Cost</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maint" id="inlineRadio2.1" value="vhigh">
+                <label class="form-check-label" for="inlineRadio2.1">Very High</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maint" id="inlineRadio2.2" value="high">
+                <label class="form-check-label" for="inlineRadio2.2">High</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maint" id="inlineRadio2.3" value="med">
+                <label class="form-check-label" for="inlineRadio2.3">Medium</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="maint" id="inlineRadio2.4" value="low">
+                <label class="form-check-label" for="inlineRadio2.4">Low</label>
+            </div>
+            <p></p>
+            
+            <!-- Select Basic -->
+            <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="doors">Doors</label>
+                <div class="col-md-4">
+                <select id="doors" name="doors" class="form-control" required>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5more">5 or more</option>
+                </select>
+                </div>
+            </div> -->
+
+            <h5>Number of Doors</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doors" id="inlineRadio3.1" value="2">
+                <label class="form-check-label" for="inlineRadio3.1">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doors" id="inlineRadio3.2" value="3">
+                <label class="form-check-label" for="inlineRadio3.2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doors" id="inlineRadio3.3" value="4">
+                <label class="form-check-label" for="inlineRadio3.3">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doors" id="inlineRadio3.4" value="5more">
+                <label class="form-check-label" for="inlineRadio3.4">5 or more</label>
+            </div>
+            <p></p>
+            
+            <!-- Select Basic -->
+            <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="persons">Persons</label>
+                <div class="col-md-4">
+                <select id="persons" name="persons" class="form-control" required>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="more">more</option>
+                </select>
+                </div>
+            </div> -->
+
+
+            <h5>Maximum Number of Passengers</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="persons" id="inlineRadio4.1" value="2">
+                <label class="form-check-label" for="inlineRadio4.1">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="persons" id="inlineRadio4.2" value="4">
+                <label class="form-check-label" for="inlineRadio4.2">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="persons" id="inlineRadio4.3" value="more">
+                <label class="form-check-label" for="inlineRadio4.3">5 or more</label>
+            </div>
+            <p></p>
+            
+            <!-- Select Basic -->
+            <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="lug_boot">Trunk space</label>
+                <div class="col-md-4">
+                <select id="lug_boot" name="lug_boot" class="form-control" required>
+                    <option value="small">Small</option>
+                    <option value="med">Medium</option>
+                    <option value="big">Big</option>
+                </select>
+                </div>
+            </div> -->
+
+
+            <h5>Trunk Space</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="lug_boot" id="inlineRadio5.1" value="small">
+                <label class="form-check-label" for="inlineRadio5.1">Small</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="lug_boot" id="inlineRadio5.2" value="med">
+                <label class="form-check-label" for="inlineRadio5.2">Medium</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="lug_boot" id="inlineRadio5.3" value="big">
+                <label class="form-check-label" for="inlineRadio5.3">Large</label>
+            </div>
+            <p></p>
+            
+            <!-- Select Basic -->
+            <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="safety">Safety</label>
+                <div class="col-md-4">
+                <select id="safety" name="safety" class="form-control" required>
+                    <option value="low">Low</option>
+                    <option value="med">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                </div>
+            </div> -->
+
+
+            <h5>Safety Level</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="safety" id="inlineRadio6.1" value="low">
+                <label class="form-check-label" for="inlineRadio6.1">Low</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="safety" id="inlineRadio6.2" value="med">
+                <label class="form-check-label" for="inlineRadio6.2">Medium</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="safety" id="inlineRadio6.3" value="high">
+                <label class="form-check-label" for="inlineRadio6.3">High</label>
+            </div>
+            <p></p>
+            
+        
+            <!-- Button -->
+
+                <label class="col-md-4 control-label" for="submit button"></label>
+                <div class="col-md-4">
+                    <button id="submit button" name="submit button" class="btn btn-primary">Submit</button>
+                </div>
+            
+            </fieldset>
+            </form>
         </div>
-      </div>
+
+    <div class="col">
+        <h2>Star Rating</h2>
+        <script>
       
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="maint">Maintenance</label>
-        <div class="col-md-4">
-          <select id="maint" name="maint" class="form-control" required>
-            <option value="1">Very High</option>
-            <option value="2">High</option>
-            <option value="3">Medium</option>
-            <option value="4">Low</option>
-          </select>
-        </div>
-      </div>
+          // Display checked stars
+          for (let i = 0; i < {{rating}}; i++) {
+            document.write('<span class="fa fa-star checked"></span>');
+          }
       
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="doors">Doors</label>
-        <div class="col-md-4">
-          <select id="doors" name="doors" class="form-control" required>
-            <option value="1">2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-            <option value="4">5 or more</option>
-          </select>
-        </div>
+          // Display unchecked stars
+          for (let i = {{rating}}; i < 4; i++) {
+            document.write('<span class="fa fa-star"></span>');
+          }
+        </script>
       </div>
-      
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="persons">Persons</label>
-        <div class="col-md-4">
-          <select id="persons" name="persons" class="form-control" required>
-            <option value="1">2</option>
-            <option value="2">4</option>
-            <option value="3">more</option>
-          </select>
-        </div>
-      </div>
-      
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="lug_boot">Trunk space</label>
-        <div class="col-md-4">
-          <select id="lug_boot" name="lug_boot" class="form-control" required>
-            <option value="1">Small</option>
-            <option value="2">Medium</option>
-            <option value="3">Big</option>
-          </select>
-        </div>
-      </div>
-      
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="safety">Safety</label>
-        <div class="col-md-4">
-          <select id="safety" name="safety" class="form-control" required>
-            <option value="1">Low</option>
-            <option value="2">Medium</option>
-            <option value="3">High</option>
-          </select>
-        </div>
-      </div>
-      
-  
-      <!-- Button -->
-      <div class="form-group">
-          <label class="col-md-4 control-label" for="submit button"></label>
-          <div class="col-md-4">
-          <button id="submit button" name="submit button" class="btn btn-primary">Submit</button>
-          </div>
-      </div>
-    
-      </fieldset>
-      </form>
+    </div>
+</div>
+      <!-- <div class="col-6">
+      <button id="increaseTemp">Increase Grade</button>
+
+  <div id="thermometer">
+    <div id="mercury"></div>
+  </div>
+  <div id="CarGrade">0</div>
+  </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+     const thermometer = document.getElementById('thermometer');
+     const mercury = document.getElementById('mercury');
+     const gradeDisplay = document.getElementById('CarGrade');
+     const increaseTempButton = document.getElementById('increaseTemp');
+
+     let currentTemperature = 0;
+     const temperatures = ['Unacceptable', 'Acceptable', 'Good', 'Very Good'];
+
+     function setGrade(CarGrade) {
+     const height = (CarGrade / 3) * thermometer.clientHeight;
+     mercury.style.height = height + 'px';
+     gradeDisplay.innerText = temperatures[CarGrade];
+     currentTemperature = CarGrade;
+     }
+
+     if (CarGrade === 1) {
+   mercury.style.backgroundColor = 'green';
+ } else {
+   mercury.style.backgroundColor = 'red';
+ }
+
+     increaseTempButton.addEventListener('click', function() {
+     if (currentTemperature < 3) {
+       currentTemperature += 1;
+       setGrade(currentTemperature);
+     } else {
+       alert("Maximum temperature reached!");
+     }
+     });
+
+     // Example: Set initial temperature
+     setGrade(currentTemperature);
+    });
+
+
+  </script> -->
 {% endblock %}

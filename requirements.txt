@@ -11,6 +11,8 @@ flask_login
 pymysql
 python-dotenv
 pyrebase4
+<<<<<<< HEAD
 pandas
 skl2onnx
 onnx
+=======
